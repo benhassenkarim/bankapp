@@ -1,0 +1,36 @@
+
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head th:replace="common/header :: common-header" />
+
+
+<body>
+<div th:replace="common/header :: navbar" />
+
+	<div class="login">
+  <form th:action="@{/contact}" method="post">
+
+   <p> <label for="fullname">Full Name</label>
+    <input type="text"  name="fullname" placeholder="Your name.."></p>
+    
+ <p><label for="email">Email</label>
+    <input type="email"  name="email" placeholder="Your last name.."></p>
+  
+   <p><label for="subject">Subject</label>
+    <input type="text"  name="subject" placeholder="Your last name.."></p>
+
+   <p> <label for="content">content</label></p>
+   <p> <textarea  name="content" placeholder="Write something.." style="height:200px"></textarea></p>
+
+   <p class="contact"> <input type="submit" value="send" name="contact"> </p>
+
+  </form>
+</div>
+
+
+<div th:replace="common/header ::body-bottom-scripts" />
+	
+</body>
+</html>

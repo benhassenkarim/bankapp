@@ -1,0 +1,32 @@
+
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head th:replace="common/header :: common-header" />
+
+<body>
+<div th:replace="common/header :: navbar" />
+
+	<div class="login">
+  <h1>Login to bankapp</h1>
+  <form method="post" th:action="@{/login}">
+    <p><input type="text" name="username"  placeholder="Username"></p>
+    <p><input type="password" name="password"  placeholder="Password"></p>
+    <p class="remember_me">
+      <label>
+        <input type="checkbox" name="remember_me" id="remember_me">
+        Remember me on this computer
+      </label>
+    </p>
+    <p class="submit"><input type="submit" name="login" value="Login"></p>
+  </form>
+</div>
+
+<div class="login-help">
+  <p>Forgot your password ? <a href="#"><label>Click here to reset it</label></a>.</p>
+</div>
+<div th:replace="common/header ::body-bottom-scripts" />
+	
+</body>
+</html>
